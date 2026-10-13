@@ -1,42 +1,665 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#171614"><meta name="description" content="The BuildMart — a considered journey through ceramic surfaces, spatial design and architectural materials in Bikaner.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The BuildMart — Ceramic Spatial Journey</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#171614;--ivory:#f2eee4;--muted:#a5a19a;--line:#ffffff2c;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:#171614;color:var(--ivory);font-family:var(--sans)}a{color:inherit;text-decoration:none}button{font:inherit}.topbar{height:79px;position:relative;z-index:10;background:linear-gradient(90deg,#171615,#242321 64%,#171411);border-bottom:1px solid #ffffff16;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center;padding:0 clamp(24px,8vw,120px);gap:20px}.wordmark{display:flex;align-items:center;gap:25px;white-space:nowrap}.wordmark strong{font:600 24px var(--serif);letter-spacing:-.035em}.wordmark span{height:16px;width:1px;background:#ffffff38}.wordmark small,.micro{font-size:10px;font-weight:700;letter-spacing:.19em;text-transform:uppercase;color:#817e78}.status{display:flex;justify-content:center;align-items:center;gap:13px;white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.status .dash{color:#77736b}.bars{height:17px;display:flex;align-items:flex-end;gap:2px}.bars i{display:block;width:3px;background:#eeeae1}.bars i:nth-child(1){height:7px}.bars i:nth-child(2){height:11px}.bars i:nth-child(3){height:15px}.bars i:nth-child(4){height:10px}.bars i:nth-child(5){height:17px}.nav-right{display:flex;justify-content:flex-end;align-items:center;gap:18px;white-space:nowrap}.coords{font-size:9px;letter-spacing:.07em;color:#8a867e}.pill{border:1px solid #ffffff35;border-radius:30px;padding:10px 17px;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;transition:.25s}.pill:hover{background:var(--ivory);color:var(--ink)}.hero{height:calc(100svh - 79px);min-height:610px;position:relative;isolation:isolate;overflow:hidden;background:#292621}.hero-bg{position:absolute;inset:0;z-index:-2;background:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2400&q=90') center 54%/cover no-repeat;transform:scale(1.015);animation:slowzoom 16s ease-in-out infinite alternate}.hero:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,12,12,.64),rgba(18,17,16,.31) 43%,rgba(14,13,12,.31)),linear-gradient(0deg,rgba(12,12,12,.72),transparent 32%,rgba(12,12,12,.32))}.hero-content{width:min(650px,calc(100% - 60px));margin:auto;padding-top:26px;text-align:left;position:relative}.scene{display:block;text-align:center;margin-bottom:26px;color:#d0cbc3;font-size:10px;font-weight:700;letter-spacing:.28em;text-transform:uppercase}.hero h1{font:500 clamp(62px,6.65vw,100px)/.97 var(--serif);letter-spacing:-.065em;margin:0 0 39px;text-align:left}.hero h1 span{display:block}.hero h1 em{font-weight:500}.hero p{font-size:16px;line-height:1.72;color:#dedbd5;max-width:610px;margin:0 auto 40px;text-align:left}.hero-actions{display:flex;gap:16px;align-items:center}.btn{height:49px;padding:0 31px;border-radius:28px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;transition:transform .25s,background .25s,color .25s;border:1px solid #ffffff55}.btn.primary{background:var(--ivory);color:#25231f;border-color:var(--ivory)}.btn.secondary{background:#ffffff12;backdrop-filter:blur(8px);color:var(--ivory)}.btn:hover{transform:translateY(-3px);background:#d5cbb9;color:#171614}.side-nav{position:absolute;left:19px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:11px}.dot{width:10px;height:10px;border-radius:50%;border:1px solid #ffffff8c;background:#ffffff30;cursor:pointer;padding:0}.dot.active{background:#f4f0e7;border-color:#f4f0e7}.side-label{position:absolute;left:21px;top:73%;writing-mode:vertical-rl;font-size:9px;letter-spacing:.25em;color:#a8a39a;text-transform:uppercase}.metrics{position:absolute;left:50%;transform:translateX(-50%);bottom:47px;width:min(650px,calc(100% - 60px));display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.metric{display:flex;flex-direction:column;gap:8px}.metric strong{font:600 12px var(--serif);color:#eee9df}.metric span{font-size:9px;letter-spacing:.16em;font-weight:700;color:#9f9a91;text-transform:uppercase;white-space:nowrap}.bottom-line{position:absolute;bottom:0;left:0;right:0;height:1px;background:#ffffff2b}.chapter{padding:110px 8vw;background:#e9e4da;color:#24221e}.chapter-inner{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:center}.chapter .micro{color:#797367}.chapter h2{font:500 clamp(42px,5vw,72px)/1.05 var(--serif);letter-spacing:-.055em;margin:24px 0}.chapter h2 em{font-weight:500}.chapter p{max-width:480px;color:#6f6a61;line-height:1.9;font-size:14px}.chapter-img{height:470px;background:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1300&q=85') center/cover}.collections{padding:100px 8vw;background:#171614}.collections-inner{max-width:1200px;margin:auto}.collections h2{font:500 clamp(42px,5vw,70px)/1.05 var(--serif);letter-spacing:-.055em;margin:22px 0 40px}.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.collection{height:320px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:23px;background:#34312c}.collection:before{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#10100fe0,transparent 75%);z-index:1}.collection img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s}.collection:hover img{transform:scale(1.06)}.collection-copy{position:relative;z-index:2}.collection small{font-size:9px;letter-spacing:.17em;color:#c2bcb1;text-transform:uppercase}.collection h3{font:500 26px var(--serif);margin:8px 0}.collection b{position:absolute;right:23px;bottom:24px;z-index:2;font-size:20px;font-weight:400}.contact{background:#292820;padding:85px 8vw}.contact-inner{max-width:1200px;margin:auto;display:flex;justify-content:space-between;gap:40px;align-items:center}.contact h2{font:500 clamp(40px,5vw,65px)/1.05 var(--serif);letter-spacing:-.05em;margin:15px 0}.contact p{color:#c1bdb4;line-height:1.8;font-size:13px}.contact-details{font-size:13px;line-height:2;color:#ddd8ce}.footer{display:flex;justify-content:space-between;gap:20px;padding:25px 8vw;background:#11110f;color:#89857d;font-size:10px;letter-spacing:.08em}.footer strong{font:600 18px var(--serif);color:#e8e2d8;letter-spacing:0}@keyframes slowzoom{from{transform:scale(1.015)}to{transform:scale(1.08)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}@media(max-width:1050px){.topbar{padding:0 28px;grid-template-columns:1fr auto}.status{display:none}.hero-content{width:min(650px,calc(100% - 100px))}.hero h1{font-size:clamp(64px,9vw,92px)}.coords{display:none}.chapter{padding:80px 6vw}.collections,.contact{padding:80px 6vw}}@media(max-width:650px){.topbar{height:68px;padding:0 20px}.wordmark{gap:12px}.wordmark strong{font-size:21px}.wordmark span,.wordmark small{display:none}.pill{padding:10px 12px;font-size:9px}.hero{height:calc(100svh - 68px);min-height:650px}.hero-bg{background-position:57% center}.hero:before{background:linear-gradient(90deg,rgba(12,12,12,.68),rgba(12,12,12,.37)),linear-gradient(0deg,rgba(12,12,12,.72),transparent 40%,rgba(12,12,12,.28))}.hero-content{width:calc(100% - 62px);padding-top:0}.scene{font-size:8px;letter-spacing:.2em;margin-bottom:28px}.hero h1{font-size:clamp(54px,12vw,78px);margin-bottom:28px}.hero p{font-size:13px;line-height:1.7;margin-bottom:27px}.hero-actions{gap:10px;flex-wrap:wrap}.btn{height:45px;padding:0 19px;font-size:9px;letter-spacing:.12em}.side-nav{left:10px;gap:9px}.dot{width:8px;height:8px}.side-label{left:12px;font-size:8px}.metrics{width:calc(100% - 55px);bottom:25px;gap:8px}.metric{gap:6px}.metric strong{font-size:10px}.metric span{font-size:7px;letter-spacing:.08em;white-space:normal;line-height:1.5}.chapter-inner{grid-template-columns:1fr;gap:28px}.chapter-img{height:300px;grid-row:1}.chapter{padding:70px 24px}.collections{padding:70px 24px}.collection-grid{grid-template-columns:1fr 1fr}.collection{height:240px;padding:15px}.collection h3{font-size:21px}.collection b{right:14px;bottom:16px}.collection small{font-size:8px}.contact{padding:70px 24px}.contact-inner{align-items:flex-start;flex-direction:column}.footer{padding:22px 24px;flex-direction:column}}@media(max-width:390px){.wordmark strong{font-size:18px}.nav-right .pill{font-size:8px}.hero h1{font-size:52px}.hero-actions{align-items:flex-start;flex-direction:column}.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.metric span{font-size:6px}.collection-grid{grid-template-columns:1fr}.collection{height:250px}}
+  :root {
+    --ivory: #f7f3eb;
+    --stone: #1a1a1a;
+    --clay: #c4a484;
+    --glaze: #8b7355;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background: #0a0a0a;
+    color: var(--ivory);
+    overflow-x: hidden;
+  }
+  .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+  .glass {
+    background: rgba(18, 18, 18, 0.65);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .glass-light {
+    background: rgba(247, 243, 235, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .ken-burns {
+    animation: kenburns 28s ease-in-out infinite alternate;
+  }
+  @keyframes kenburns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.12) translate(-2%, -1%); }
+  }
+  .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .chapter-dot {
+    transition: all 0.4s ease;
+  }
+  .chapter-dot.active {
+    background: var(--ivory);
+    box-shadow: 0 0 12px rgba(247, 243, 235, 0.5);
+  }
+  .swatch {
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    cursor: pointer;
+  }
+  .swatch:hover, .swatch.active {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+  .spec-sheet {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease, padding 0.4s ease;
+  }
+  .spec-sheet.open {
+    max-height: 420px;
+    opacity: 1;
+  }
+  .freq-bar {
+    animation: pulse-freq 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse-freq {
+    0%, 100% { height: 4px; opacity: 0.4; }
+    50% { height: 14px; opacity: 1; }
+  }
+  .freq-bar:nth-child(2) { animation-delay: 0.15s; }
+  .freq-bar:nth-child(3) { animation-delay: 0.3s; }
+  .freq-bar:nth-child(4) { animation-delay: 0.45s; }
+  .freq-bar:nth-child(5) { animation-delay: 0.1s; }
+  .parallax-slow { will-change: transform; }
+  .hairline { border-color: rgba(255,255,255,0.15); }
+  .tracker-line {
+    background: linear-gradient(to bottom, transparent, rgba(247,243,235,0.3), transparent);
+  }
+  input, textarea, select {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--ivory);
+    transition: border-color 0.3s, background 0.3s;
+  }
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: rgba(247,243,235,0.4);
+    background: rgba(255,255,255,0.08);
+  }
+  input::placeholder, textarea::placeholder { color: rgba(247,243,235,0.35); }
+  .btn-primary {
+    background: linear-gradient(135deg, #f7f3eb 0%, #e8dfd0 100%);
+    color: #1a1a1a;
+    transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(247,243,235,0.25);
+  }
+  .section-bg {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  @media (max-width: 768px) {
+    .section-bg { background-attachment: scroll; }
+    .ken-burns { animation: none; }
+  }
+  .nav-blur {
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .telemetry {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.08em;
+  }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #0a0a0a; }
+  ::-webkit-scrollbar-thumb { background: rgba(247,243,235,0.2); border-radius: 3px; }
 </style>
 </head>
 <body>
-<header class="topbar">
-<a class="wordmark" href="#top"><strong>The BuildMart</strong><span></span><small>Ceramic Spatial Journey</small></a>
-<div class="status"><span>01 Monolith</span><span class="dash">—</span><span class="bars" aria-label="Ambient sound indicator"><i></i><i></i><i></i><i></i><i></i></span><span class="micro">Ambient 432Hz</span></div>
-<div class="nav-right"><span class="coords">41.9028° N · 12.4964° E</span><a class="pill" href="#contact">Atelier access</a></div>
-</header>
-<main id="top">
-<section class="hero" aria-label="Ceramic Spatial Journey">
-<div class="hero-bg"></div>
-<div class="side-nav" aria-label="Scene navigation"><button class="dot active" aria-label="Scene 1" data-scene="0"></button><button class="dot" aria-label="Scene 2" data-scene="1"></button><button class="dot" aria-label="Scene 3" data-scene="2"></button><button class="dot" aria-label="Scene 4" data-scene="3"></button><button class="dot" aria-label="Scene 5" data-scene="4"></button></div><span class="side-label">Frame</span>
-<div class="hero-content"><span class="scene">Scene 01 · Spatial Horizon</span><h1><span>Ceramic</span><span><em>Spatial Journey</em></span></h1><p>Monumental curved ceramic atelier halls. Soft ambient directional light. Surfaces that hold memory, shadow, and architectural silence.</p><div class="hero-actions"><a class="btn primary" href="#collections">Enter the atelier</a><a class="btn secondary" href="#matrix">Material matrix</a></div></div>
-<div class="metrics"><div class="metric"><strong>±0.2mm</strong><span>Zero-shadow rectification</span></div><div class="metric"><strong>ASTM C1026</strong><span>Freeze-thaw resistance</span></div><div class="metric"><strong>LEED v4.1</strong><span>Material credits</span></div></div><div class="bottom-line"></div>
-</section>
-<section class="chapter" id="matrix"><div class="chapter-inner"><div><span class="micro">A material-first philosophy</span><h2>Spaces shaped by<br><em>light and matter.</em></h2><p>Explore ceramics and architectural finishes through a more considered lens. Texture, tone and proportion work together to create spaces that feel timeless, grounded and unmistakably yours.</p><a class="pill" href="#collections">Explore the material library ↗</a></div><div class="chapter-img" role="img" aria-label="Contemporary interior with natural materials"></div></div></section>
-<section class="collections" id="collections"><div class="collections-inner"><span class="micro">Curated for your next chapter</span><h2>The material matrix.</h2><div class="collection-grid">
-<a class="collection" href="https://www.thebuildmart.in/tiles-in-bikaner"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85" alt="Architectural tile and stone surfaces"><div class="collection-copy"><small>01 / Surface</small><h3>Ceramic & tiles</h3></div><b>↗</b></a>
-<a class="collection" href="https://www.thebuildmart.in/sanitaryware-bikaner/"><img loading="lazy" src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=900&q=85" alt="Minimal bathroom interior"><div class="collection-copy"><small>02 / Ritual</small><h3>Bath atelier</h3></div><b>↗</b></a>
-<a class="collection" href="https://www.thebuildmart.in/"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=85" alt="Contemporary architectural interior"><div class="collection-copy"><small>03 / Finish</small><h3>Interior details</h3></div><b>↗</b></a>
-</div></div></section>
-<section class="contact" id="contact"><div class="contact-inner"><div><span class="micro">The BuildMart · Bikaner</span><h2>Enter the atelier.</h2><p>Discover materials in person and bring your next space into focus.</p><a class="pill" href="https://www.google.com/maps/search/?api=1&query=The+Build+Mart+Raisar+Bikaner" target="_blank" rel="noopener">Find the showroom ↗</a></div><div class="contact-details">12 Km Milestone, NH-11, Jaipur Highway<br>Raisar, Bikaner, Rajasthan 334001<br><a href="tel:+918955868448">+91 89558 68448</a><br><a href="mailto:info@thebuildmart.in">info@thebuildmart.in</a></div></div></section>
-</main>
-<footer class="footer"><strong>The BuildMart</strong><span>Ceramic Spatial Journey · Bikaner, Rajasthan</span><span>© <span id="year"></span> The BuildMart</span></footer>
+  <!-- Top Navigation / Chapter Bar -->
+  <nav id="topNav" class="fixed top-0 left-0 right-0 z-50 nav-blur border-b hairline transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <div class="flex items-center gap-6">
+          <a href="#scene-01" class="font-serif text-xl md:text-2xl tracking-wide text-[var(--ivory)]">The BuildMart</a>
+          <span class="hidden md:inline-block text-[10px] uppercase tracking-[0.25em] text-white/40 border-l border-white/15 pl-6">Ceramic Spatial Journey</span>
+        </div>
+        <div class="hidden lg:flex items-center gap-1 text-[11px] uppercase tracking-[0.2em] text-white/50">
+          <span id="chapterLabel" class="text-[var(--ivory)]">01 Monolith</span>
+          <span class="mx-2 text-white/20">—</span>
+          <span class="flex items-center gap-1.5">
+            <span class="flex items-end gap-[2px] h-3">
+              <span class="freq-bar w-[2px] bg-[var(--ivory)] rounded-full"></span>
+              <span class="freq-bar w-[2px] bg-[var(--ivory)] rounded-full"></span>
+              <span class="freq-bar w-[2px] bg-[var(--ivory)] rounded-full"></span>
+              <span class="freq-bar w-[2px] bg-[var(--ivory)] rounded-full"></span>
+              <span class="freq-bar w-[2px] bg-[var(--ivory)] rounded-full"></span>
+            </span>
+            <span class="text-white/30 ml-1">Ambient 432Hz</span>
+          </span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="hidden sm:block text-[10px] telemetry text-white/30" id="coords">41.9028° N · 12.4964° E</span>
+          <a href="#scene-05" class="text-[11px] uppercase tracking-[0.15em] px-4 py-2 glass-light rounded-full hover:bg-white/10 transition">Atelier Access</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Vertical Frame Tracker -->
+  <aside class="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col items-center gap-0">
+    <div class="tracker-line w-px h-16 mb-2"></div>
+    <div id="frameTracker" class="flex flex-col items-center gap-3">
+      <button data-scene="1" class="chapter-dot active w-2.5 h-2.5 rounded-full bg-white/30 border border-white/40" title="01 Monolith"></button>
+      <button data-scene="2" class="chapter-dot w-2.5 h-2.5 rounded-full bg-white/30 border border-white/40" title="02 Tactility"></button>
+      <button data-scene="3" class="chapter-dot w-2.5 h-2.5 rounded-full bg-white/30 border border-white/40" title="03 Sculpture"></button>
+      <button data-scene="4" class="chapter-dot w-2.5 h-2.5 rounded-full bg-white/30 border border-white/40" title="04 Plinth Studio"></button>
+      <button data-scene="5" class="chapter-dot w-2.5 h-2.5 rounded-full bg-white/30 border border-white/40" title="05 Epilogue"></button>
+    </div>
+    <div class="tracker-line w-px h-16 mt-2"></div>
+    <span class="mt-4 text-[9px] uppercase tracking-[0.3em] text-white/30 writing-mode-vertical" style="writing-mode: vertical-rl;">Frame</span>
+  </aside>
+
+  <!-- SCENE 01 — Spatial Horizon / Monolith -->
+  <section id="scene-01" data-chapter="01 Monolith" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2400&q=80" alt="Monumental ceramic atelier hall" class="w-full h-full object-cover ken-burns">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/20"></div>
+    </div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-20 text-center md:text-left">
+      <div class="fade-up">
+        <p class="text-[11px] uppercase tracking-[0.35em] text-white/50 mb-6">Scene 01 · Spatial Horizon</p>
+        <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light leading-[0.95] tracking-tight mb-8">
+          Ceramic<br>
+          <span class="italic text-white/80">Spatial</span> Journey
+        </h1>
+        <p class="max-w-xl text-base md:text-lg text-white/60 leading-relaxed mb-10 font-light">
+          Monumental curved ceramic atelier halls. Soft ambient directional light. Surfaces that hold memory, shadow, and architectural silence.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+          <a href="#scene-02" class="btn-primary px-8 py-3.5 rounded-full text-[12px] uppercase tracking-[0.2em] font-medium">Enter the Atelier</a>
+          <a href="#scene-04" class="glass-light px-8 py-3.5 rounded-full text-[12px] uppercase tracking-[0.2em] hover:bg-white/10 transition">Material Matrix</a>
+        </div>
+      </div>
+      <div class="fade-up mt-16 md:mt-24 flex flex-wrap gap-8 md:gap-16 text-[10px] uppercase tracking-[0.2em] text-white/40">
+        <div><span class="block text-white/70 text-sm font-serif normal-case tracking-normal mb-1">±0.2mm</span>Zero-Shadow Rectification</div>
+        <div><span class="block text-white/70 text-sm font-serif normal-case tracking-normal mb-1">ASTM C1026</span>Freeze-Thaw Resistance</div>
+        <div><span class="block text-white/70 text-sm font-serif normal-case tracking-normal mb-1">LEED v4.1</span>Material Credits</div>
+      </div>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30">
+      <span class="text-[9px] uppercase tracking-[0.3em]">Scroll</span>
+      <div class="w-px h-10 bg-gradient-to-b from-white/40 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- SCENE 02 — The Tactile Microcosm -->
+  <section id="scene-02" data-chapter="02 Tactility" class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=2400&q=80" alt="Macro craquelé glaze ceramic texture" class="w-full h-full object-cover ken-burns">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/50"></div>
+    </div>
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 py-28">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="fade-up">
+          <p class="text-[11px] uppercase tracking-[0.35em] text-white/50 mb-4">Scene 02 · The Tactile Microcosm</p>
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-6">
+            Hand-cast<br><span class="italic">Craquelé</span> Glaze
+          </h2>
+          <p class="text-white/55 leading-relaxed mb-8 max-w-md">
+            Microscopic mineral fissures. Terracotta edges revealed under raking light. Each surface a living record of fire, clay, and time—engineered for architectural permanence.
+          </p>
+          <div class="glass rounded-2xl p-6 md:p-8 max-w-md">
+            <h3 class="text-[11px] uppercase tracking-[0.25em] text-white/40 mb-4">Specimen Telemetry</h3>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between border-b border-white/10 pb-2"><span class="text-white/40">Mineral Body</span><span>Stoneware · 1280°C</span></div>
+              <div class="flex justify-between border-b border-white/10 pb-2"><span class="text-white/40">Glaze Type</span><span>Craquelé · Reactive</span></div>
+              <div class="flex justify-between border-b border-white/10 pb-2"><span class="text-white/40">Flexural Modulus</span><span>ISO 10545-4</span></div>
+              <div class="flex justify-between"><span class="text-white/40">Surface Depth</span><span>0.8–1.4mm fissure</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up grid grid-cols-2 gap-4">
+          <div class="glass-light rounded-2xl p-5 aspect-[4/5] flex flex-col justify-end">
+            <span class="text-[10px] uppercase tracking-widest text-white/40 mb-1">Texture 01</span>
+            <span class="font-serif text-xl">Matte Honed</span>
+          </div>
+          <div class="glass-light rounded-2xl p-5 aspect-[4/5] flex flex-col justify-end mt-8">
+            <span class="text-[10px] uppercase tracking-widest text-white/40 mb-1">Texture 02</span>
+            <span class="font-serif text-xl">Craquelé</span>
+          </div>
+          <div class="glass-light rounded-2xl p-5 aspect-[4/5] flex flex-col justify-end -mt-4">
+            <span class="text-[10px] uppercase tracking-widest text-white/40 mb-1">Texture 03</span>
+            <span class="font-serif text-xl">Bas-Relief</span>
+          </div>
+          <div class="glass-light rounded-2xl p-5 aspect-[4/5] flex flex-col justify-end mt-4">
+            <span class="text-[10px] uppercase tracking-widest text-white/40 mb-1">Texture 04</span>
+            <span class="font-serif text-xl">Raw Clay</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 03 — The Spatial Monolith -->
+  <section id="scene-03" data-chapter="03 Sculpture" class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2400&q=80" alt="Museum-grade travertine and stoneware monoliths" class="w-full h-full object-cover ken-burns">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/35 to-black/75"></div>
+    </div>
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 py-28">
+      <div class="text-center mb-16 fade-up">
+        <p class="text-[11px] uppercase tracking-[0.35em] text-white/50 mb-4">Scene 03 · The Spatial Monolith</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-3xl mx-auto">
+          Carved Travertine &amp;<br><span class="italic">Monolithic Stoneware</span>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 fade-up">
+        <article class="glass rounded-2xl overflow-hidden group">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Travertine plinth" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif text-2xl mb-2">Plinth Series A</h3>
+            <p class="text-sm text-white/45 leading-relaxed">Museum-grade carved travertine. Load-bearing architectural pedestals for sculptural ceramic installations.</p>
+          </div>
+        </article>
+        <article class="glass rounded-2xl overflow-hidden group md:translate-y-8">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Stoneware monolith" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif text-2xl mb-2">Monolith M-12</h3>
+            <p class="text-sm text-white/45 leading-relaxed">Large-format stoneware slabs. Continuous veining and kiln-fired structural integrity for vertical cladding.</p>
+          </div>
+        </article>
+        <article class="glass rounded-2xl overflow-hidden group">
+          <div class="aspect-[3/4] overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800&q=80" alt="Ceramic installation" class="w-full h-full object-cover transition duration-700 group-hover:scale-105">
+          </div>
+          <div class="p-6">
+            <h3 class="font-serif text-2xl mb-2">Atelier Volume</h3>
+            <p class="text-sm text-white/45 leading-relaxed">Spatial ceramic volumes designed for gallery and lobby environments. Custom dimensional tolerance ±0.2mm.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 04 — Material Spectrum & Specifier Terminal -->
+  <section id="scene-04" data-chapter="04 Plinth Studio" class="relative min-h-screen overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=80" alt="Rich textured stone environment" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/70"></div>
+    </div>
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 py-28">
+      <div class="fade-up mb-12">
+        <p class="text-[11px] uppercase tracking-[0.35em] text-white/50 mb-4">Scene 04 · Material Spectrum</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-light mb-4">Tactile Specimen Matrix</h2>
+        <p class="text-white/50 max-w-xl">Filterable mineral matrix with frosted ceramic swatches. Slide open technical specification sheets for architects and trade specifiers.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="fade-up flex flex-wrap gap-2 mb-10">
+        <button class="filter-btn active px-4 py-2 rounded-full text-[11px] uppercase tracking-[0.15em] glass-light hover:bg-white/10 transition" data-filter="all">All</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-[11px] uppercase tracking-[0.15em] glass-light hover:bg-white/10 transition" data-filter="matte">Matte Honed</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-[11px] uppercase tracking-[0.15em] glass-light hover:bg-white/10 transition" data-filter="craquele">Craquelé Glaze</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-[11px] uppercase tracking-[0.15em] glass-light hover:bg-white/10 transition" data-filter="relief">3D Bas-Relief</button>
+        <button class="filter-btn px-4 py-2 rounded-full text-[11px] uppercase tracking-[0.15em] glass-light hover:bg-white/10 transition" data-filter="raw">Raw Clay</button>
+      </div>
+
+      <!-- Swatch Grid -->
+      <div class="fade-up grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-20" id="swatchGrid">
+        <!-- Matte Honed -->
+        <div class="swatch glass rounded-2xl overflow-hidden" data-category="matte">
+          <div class="h-36 bg-gradient-to-br from-[#a89078] via-[#8b7355] to-[#6b5344]"></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif text-xl">Matte Honed</h3>
+              <span class="text-[10px] text-white/30">BM-MH-01</span>
+            </div>
+            <p class="text-xs text-white/40 mb-3">Silky non-reflective finish. Ideal for large-format wall cladding.</p>
+            <button class="spec-toggle text-[10px] uppercase tracking-[0.2em] text-white/60 hover:text-white transition border-b border-white/20 pb-0.5">Technical Sheet</button>
+            <div class="spec-sheet mt-4 text-xs space-y-2 text-white/50">
+              <div class="flex justify-between"><span>Format</span><span>600×1200 / 900×900</span></div>
+              <div class="flex justify-between"><span>Thickness</span><span>9–12mm</span></div>
+              <div class="flex justify-between"><span>Water Abs.</span><span>≤0.5%</span></div>
+              <div class="flex justify-between"><span>PEI</span><span>Class IV</span></div>
+              <div class="flex justify-between"><span>Slip</span><span>R10</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Craquelé -->
+        <div class="swatch glass rounded-2xl overflow-hidden" data-category="craquele">
+          <div class="h-36 bg-gradient-to-br from-[#d4c4a8] via-[#b8a078] to-[#9a7b5a] relative overflow-hidden">
+            <div class="absolute inset-0 opacity-40" style="background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 100 100%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');"></div>
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif text-xl">Craquelé Glaze</h3>
+              <span class="text-[10px] text-white/30">BM-CQ-04</span>
+            </div>
+            <p class="text-xs text-white/40 mb-3">Reactive crackle glaze. Mineral fissures under controlled cooling.</p>
+            <button class="spec-toggle text-[10px] uppercase tracking-[0.2em] text-white/60 hover:text-white transition border-b border-white/20 pb-0.5">Technical Sheet</button>
+            <div class="spec-sheet mt-4 text-xs space-y-2 text-white/50">
+              <div class="flex justify-between"><span>Format</span><span>300×600 / 450×450</span></div>
+              <div class="flex justify-between"><span>Thickness</span><span>10–14mm</span></div>
+              <div class="flex justify-between"><span>Firing</span><span>1280°C · Reduction</span></div>
+              <div class="flex justify-between"><span>Sealer</span><span>Required · Food-safe</span></div>
+              <div class="flex justify-between"><span>Application</span><span>Feature walls · Wet</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Bas-Relief -->
+        <div class="swatch glass rounded-2xl overflow-hidden" data-category="relief">
+          <div class="h-36 bg-gradient-to-br from-[#7a6a58] via-[#5c4e40] to-[#3d342c] flex items-center justify-center">
+            <div class="w-16 h-20 border border-white/20 rounded-sm shadow-inner" style="box-shadow: inset 4px 0 8px rgba(0,0,0,0.3), inset -2px 0 4px rgba(255,255,255,0.05);"></div>
+          </div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif text-xl">3D Bas-Relief</h3>
+              <span class="text-[10px] text-white/30">BM-BR-07</span>
+            </div>
+            <p class="text-xs text-white/40 mb-3">Fluted dimensional surface. Cast shadow play across architectural planes.</p>
+            <button class="spec-toggle text-[10px] uppercase tracking-[0.2em] text-white/60 hover:text-white transition border-b border-white/20 pb-0.5">Technical Sheet</button>
+            <div class="spec-sheet mt-4 text-xs space-y-2 text-white/50">
+              <div class="flex justify-between"><span>Format</span><span>400×800 flute</span></div>
+              <div class="flex justify-between"><span>Relief Depth</span><span>8–18mm</span></div>
+              <div class="flex justify-between"><span>Module</span><span>Linear · Stackable</span></div>
+              <div class="flex justify-between"><span>Weight</span><span>22 kg/m²</span></div>
+              <div class="flex justify-between"><span>Mount</span><span>Rail · Adhesive</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Raw Clay -->
+        <div class="swatch glass rounded-2xl overflow-hidden" data-category="raw">
+          <div class="h-36 bg-gradient-to-br from-[#c4785a] via-[#a85a3c] to-[#8b4518]"></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-serif text-xl">Raw Clay</h3>
+              <span class="text-[10px] text-white/30">BM-RC-02</span>
+            </div>
+            <p class="text-xs text-white/40 mb-3">Unglazed terracotta body. Honest mineral colour and tactile grain.</p>
+            <button class="spec-toggle text-[10px] uppercase tracking-[0.2em] text-white/60 hover:text-white transition border-b border-white/20 pb-0.5">Technical Sheet</button>
+            <div class="spec-sheet mt-4 text-xs space-y-2 text-white/50">
+              <div class="flex justify-between"><span>Format</span><span>Custom extrusion</span></div>
+              <div class="flex justify-between"><span>Body</span><span>Terracotta · 1100°C</span></div>
+              <div class="flex justify-between"><span>Porosity</span><span>6–8%</span></div>
+              <div class="flex justify-between"><span>Finish</span><span>Natural · Waxed opt.</span></div>
+              <div class="flex justify-between"><span>Use</span><span>Interior · Facade</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bespoke Atelier Plinth Box Request -->
+      <div class="fade-up glass rounded-3xl p-8 md:p-12 max-w-3xl mx-auto">
+        <div class="text-center mb-8">
+          <p class="text-[11px] uppercase tracking-[0.3em] text-white/40 mb-2">Specifier Terminal</p>
+          <h3 class="font-serif text-3xl md:text-4xl font-light">Bespoke Atelier<br>Plinth Box Request</h3>
+          <p class="text-sm text-white/45 mt-3 max-w-md mx-auto">For architects and trade professionals. Curated material samples shipped to your studio.</p>
+        </div>
+        <form id="atelierForm" class="space-y-5" onsubmit="return handleForm(event)">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-[10px] uppercase tracking-[0.2em] text-white/40 mb-2">Full Name</label>
+              <input type="text" name="name" required placeholder="Elena Rossi" class="w-full px-4 py-3 rounded-xl text-sm">
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase tracking-[0.2em] text-white/40 mb-2">Studio / Practice</label>
+              <input type="text" name="studio" required placeholder="Atelier North" class="w-full px-4 py-3 rounded-xl text-sm">
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-[10px] uppercase tracking-[0.2em] text-white/40 mb-2">Email</label>
+              <input type="email" name="email" required placeholder="e@atelier.studio" class="w-full px-4 py-3 rounded-xl text-sm">
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase tracking-[0.2em] text-white/40 mb-2">Primary Interest</label>
+              <select name="interest" class="w-full px-4 py-3 rounded-xl text-sm">
+                <option value="matte">Matte Honed</option>
+                <option value="craquele">Craquelé Glaze</option>
+                <option value="relief">3D Bas-Relief</option>
+                <option value="raw">Raw Clay</option>
+                <option value="custom">Custom Commission</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label class="block text-[10px] uppercase tracking-[0.2em] text-white/40 mb-2">Project Notes</label>
+            <textarea name="notes" rows="3" placeholder="Lobby cladding · 420 m² · Milan" class="w-full px-4 py-3 rounded-xl text-sm resize-none"></textarea>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+            <button type="submit" class="btn-primary w-full sm:w-auto px-10 py-3.5 rounded-full text-[12px] uppercase tracking-[0.2em] font-medium">Request Plinth Box</button>
+            <p class="text-[10px] text-white/30">Trade verification within 48h · CAD/BIM portal access included</p>
+          </div>
+          <p id="formSuccess" class="hidden text-center text-sm text-emerald-300/80 pt-2">Request received. An atelier coordinator will confirm dispatch.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCENE 05 — Epilogue / Company & Archival -->
+  <section id="scene-05" data-chapter="05 Epilogue" class="relative min-h-screen overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=2400&q=80" alt="Atelier archival environment" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/60"></div>
+    </div>
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-6 py-28">
+      <div class="fade-up text-center mb-16">
+        <p class="text-[11px] uppercase tracking-[0.35em] text-white/50 mb-4">Scene 05 · Atelier Archival Epilogue</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-light">International Studios</h2>
+      </div>
+
+      <div class="fade-up grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-20">
+        <div class="glass rounded-2xl p-6">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-white/35">Italy</span>
+          <h3 class="font-serif text-2xl mt-2 mb-3">Milan Studio</h3>
+          <p class="text-sm text-white/45 leading-relaxed">Via Tortona 32<br>20144 Milano<br>Showroom · Spec Desk</p>
+          <p class="text-[11px] text-white/30 mt-4 telemetry">45.4500° N · 9.1700° E</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-white/35">United Kingdom</span>
+          <h3 class="font-serif text-2xl mt-2 mb-3">London Gallery</h3>
+          <p class="text-sm text-white/45 leading-relaxed">17 Clerkenwell Road<br>EC1M 5RD London<br>Gallery · Private View</p>
+          <p class="text-[11px] text-white/30 mt-4 telemetry">51.5225° N · 0.1030° W</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-white/35">India</span>
+          <h3 class="font-serif text-2xl mt-2 mb-3">Mumbai Hub</h3>
+          <p class="text-sm text-white/45 leading-relaxed">Bandra Kurla Complex<br>Mumbai 400051<br>Trade · Logistics</p>
+          <p class="text-[11px] text-white/30 mt-4 telemetry">19.0596° N · 72.8656° E</p>
+        </div>
+        <div class="glass rounded-2xl p-6">
+          <span class="text-[10px] uppercase tracking-[0.25em] text-white/35">Italy · Production</span>
+          <h3 class="font-serif text-2xl mt-2 mb-3">Sassuolo Labs</h3>
+          <p class="text-sm text-white/45 leading-relaxed">Ceramic Basin Laboratories<br>Sassuolo, Emilia-Romagna<br>R&amp;D · Kiln Halls</p>
+          <p class="text-[11px] text-white/30 mt-4 telemetry">44.5420° N · 10.7840° E</p>
+        </div>
+      </div>
+
+      <!-- Technical Standards -->
+      <div class="fade-up glass rounded-2xl p-8 md:p-10 mb-16">
+        <h3 class="font-serif text-2xl md:text-3xl mb-8 text-center">Technical Standards</h3>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div>
+            <p class="font-serif text-xl text-white/90 mb-1">ASTM C1026</p>
+            <p class="text-[11px] uppercase tracking-[0.15em] text-white/40">Freeze-Thaw Resistance</p>
+          </div>
+          <div>
+            <p class="font-serif text-xl text-white/90 mb-1">ISO 10545-4</p>
+            <p class="text-[11px] uppercase tracking-[0.15em] text-white/40">Flexural Modulus</p>
+          </div>
+          <div>
+            <p class="font-serif text-xl text-white/90 mb-1">±0.2mm</p>
+            <p class="text-[11px] uppercase tracking-[0.15em] text-white/40">Zero-Shadow Rectification</p>
+          </div>
+          <div>
+            <p class="font-serif text-xl text-white/90 mb-1">LEED v4.1</p>
+            <p class="text-[11px] uppercase tracking-[0.15em] text-white/40">Material Credits</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Downloads & Contact -->
+      <div class="fade-up grid md:grid-cols-2 gap-6 mb-20">
+        <div class="glass-light rounded-2xl p-8">
+          <h4 class="font-serif text-xl mb-4">Digital CAD / BIM Portal</h4>
+          <p class="text-sm text-white/45 mb-6">Download DWG, RFA, and IFC libraries for all standard formats. Specifier credentials required.</p>
+          <div class="flex flex-wrap gap-3">
+            <button onclick="alert('CAD library download would begin for verified accounts.')" class="px-5 py-2.5 rounded-full text-[11px] uppercase tracking-[0.15em] border border-white/20 hover:bg-white/10 transition">.DWG Pack</button>
+            <button onclick="alert('Revit family library download would begin for verified accounts.')" class="px-5 py-2.5 rounded-full text-[11px] uppercase tracking-[0.15em] border border-white/20 hover:bg-white/10 transition">.RFA Families</button>
+            <button onclick="alert('IFC models download would begin for verified accounts.')" class="px-5 py-2.5 rounded-full text-[11px] uppercase tracking-[0.15em] border border-white/20 hover:bg-white/10 transition">.IFC Models</button>
+          </div>
+        </div>
+        <div class="glass-light rounded-2xl p-8">
+          <h4 class="font-serif text-xl mb-4">Specifier Direct Line</h4>
+          <p class="text-sm text-white/45 mb-6">Dedicated architectural support for detailing, samples, and project logistics.</p>
+          <p class="text-lg font-light tracking-wide">+39 02 9288 4100</p>
+          <p class="text-sm text-white/50 mt-1">specifier@thebuildmart.com</p>
+          <p class="text-[10px] text-white/30 mt-4 uppercase tracking-widest">Mon–Fri · 09:00–18:00 CET</p>
+        </div>
+      </div>
+
+      <!-- Footer legal -->
+      <footer class="fade-up border-t border-white/10 pt-10 pb-6">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <div>
+            <p class="font-serif text-xl mb-1">The BuildMart</p>
+            <p class="text-[11px] text-white/35 uppercase tracking-[0.2em]">Ceramic Spatial Systems</p>
+          </div>
+          <div class="text-[11px] text-white/30 max-w-md leading-relaxed">
+            © 2025 The BuildMart Atelier. All ceramic surfaces, glazes, and dimensional systems are protected under international design and technical IP. Specifier materials for professional use only. Not for resale.
+          </div>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-6 text-[10px] uppercase tracking-[0.2em] text-white/25">
+          <a href="#" class="hover:text-white/50 transition">Privacy</a>
+          <a href="#" class="hover:text-white/50 transition">Trade Terms</a>
+          <a href="#" class="hover:text-white/50 transition">Sustainability Report</a>
+          <a href="#" class="hover:text-white/50 transition">Legal Disclosures</a>
+        </div>
+      </footer>
+    </div>
+  </section>
+
 <script>
-document.getElementById('year').textContent=new Date().getFullYear();
-const scenes=[{label:'Scene 01 · Spatial Horizon',title:['Ceramic','Spatial Journey'],image:'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2400&q=90'},{label:'Scene 02 · Quiet Geometry',title:['Quiet','Geometry'],image:'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2400&q=90'},{label:'Scene 03 · Ritual Objects',title:['Everyday','Rituals'],image:'https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=2400&q=90'},{label:'Scene 04 · Natural Forms',title:['Natural','Forms'],image:'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2400&q=90'},{label:'Scene 05 · Material Presence',title:['Material','Presence'],image:'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2400&q=90'}];
-const dots=[...document.querySelectorAll('.dot')],bg=document.querySelector('.hero-bg'),sceneLabel=document.querySelector('.scene'),heading=document.querySelector('.hero h1');
-dots.forEach((dot,i)=>dot.addEventListener('click',()=>{dots.forEach(d=>d.classList.remove('active'));dot.classList.add('active');const s=scenes[i];sceneLabel.textContent=s.label;heading.innerHTML='<span>'+s.title[0]+'</span><span><em>'+s.title[1]+'</em></span>';bg.style.backgroundImage='url("'+s.image+'")';}));
+  // Intersection Observer for fade-up
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const fadeObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  fadeEls.forEach(el => fadeObs.observe(el));
+
+  // Chapter tracking
+  const sections = document.querySelectorAll('section[data-chapter]');
+  const chapterLabel = document.getElementById('chapterLabel');
+  const dots = document.querySelectorAll('.chapter-dot');
+  const coords = document.getElementById('coords');
+  const coordMap = {
+    1: '41.9028° N · 12.4964° E',
+    2: '44.5420° N · 10.7840° E',
+    3: '45.4500° N · 9.1700° E',
+    4: '51.5225° N · 0.1030° W',
+    5: '19.0596° N · 72.8656° E'
+  };
+
+  const sectionObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const ch = entry.target.getAttribute('data-chapter');
+        chapterLabel.textContent = ch;
+        const idx = parseInt(entry.target.id.replace('scene-0', ''), 10);
+        dots.forEach(d => d.classList.remove('active'));
+        const activeDot = document.querySelector(`.chapter-dot[data-scene="${idx}"]`);
+        if (activeDot) activeDot.classList.add('active');
+        if (coords && coordMap[idx]) coords.textContent = coordMap[idx];
+      }
+    });
+  }, { threshold: 0.35 });
+  sections.forEach(s => sectionObs.observe(s));
+
+  // Tracker click
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const n = dot.getAttribute('data-scene');
+      document.getElementById('scene-0' + n).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  // Spec sheet toggles
+  document.querySelectorAll('.spec-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const sheet = btn.nextElementSibling;
+      const isOpen = sheet.classList.contains('open');
+      document.querySelectorAll('.spec-sheet').forEach(s => s.classList.remove('open'));
+      document.querySelectorAll('.spec-toggle').forEach(b => b.textContent = 'Technical Sheet');
+      if (!isOpen) {
+        sheet.classList.add('open');
+        btn.textContent = 'Close Sheet';
+      }
+    });
+  });
+
+  // Filter swatches
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.getAttribute('data-filter');
+      document.querySelectorAll('#swatchGrid .swatch').forEach(sw => {
+        if (f === 'all' || sw.getAttribute('data-category') === f) {
+          sw.style.display = '';
+          sw.style.opacity = '1';
+        } else {
+          sw.style.opacity = '0';
+          setTimeout(() => { sw.style.display = 'none'; }, 300);
+        }
+      });
+    });
+  });
+
+  // Form handler
+  function handleForm(e) {
+    e.preventDefault();
+    document.getElementById('formSuccess').classList.remove('hidden');
+    e.target.reset();
+    setTimeout(() => {
+      document.getElementById('formSuccess').classList.add('hidden');
+    }, 5000);
+    return false;
+  }
+
+  // Subtle nav shrink on scroll
+  let lastY = 0;
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('topNav');
+    if (window.scrollY > 80) nav.classList.add('py-0');
+    lastY = window.scrollY;
+  }, { passive: true });
 </script>
 </body>
 </html>
